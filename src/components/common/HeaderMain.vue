@@ -12,9 +12,9 @@
           <li @mouseenter="isMenuOn = true" @mouseleave="isMenuOn = false">
             <router-link to="/about" active-class="active">about us</router-link>
             <ul v-if="isMenuOn" class="sub_menu">
-              <li><router-link to="">회사소개</router-link></li>
-              <li><router-link to="">our story</router-link></li>
-              <li><router-link to="">App</router-link></li>
+              <li><router-link to="/about">회사소개</router-link></li>
+              <li><router-link to="/about/story">our story</router-link></li>
+              <li><router-link to="/about/app">App</router-link></li>
             </ul>
           </li>
           <li>

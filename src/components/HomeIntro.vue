@@ -27,8 +27,8 @@
                 구매/시공/설치까지 쉽고 간편하게 이용해보세요
               </p>
               <div class="img_box">
-                <a href="#"><img src="img/google-play.svg" alt="google" /></a>
-                <a href="#"><img src="img/app-store-icon.svg" alt="apple" /></a>
+                <a href="#" @click.prevent="moveTopage"><img src="img/google-play.svg" alt="google" /></a>
+                <a href="#" @click.prevent="moveTopage"><img src="img/app-store-icon.svg" alt="apple" /></a>
               </div>
             </div>
           </div>
@@ -87,6 +87,7 @@
 </template>
 
 <script setup>
+import router from "@/router";
 import { ref } from "vue";
 
 const isAppOn = ref(true);
@@ -109,6 +110,10 @@ const menuOn = (menu) => {
   } else if (menu === "intro") {
     isIntroOn.value = true;
   }
+};
+
+const moveTopage = () => {
+  router.push("/error");
 };
 </script>
 

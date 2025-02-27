@@ -19,12 +19,12 @@
           <router-link to="#" class="btn b2">이메일 문의</router-link>
         </div>
         <div class="middle">
-          <router-link to="">회사소개</router-link>
-          <router-link to="">채용정보</router-link>
-          <router-link to="">공지사항</router-link>
-          <router-link to="">입점신청</router-link>
-          <router-link to="">제휴/광고문의</router-link>
-          <router-link to="">사업자 구매 회원</router-link>
+          <router-link to="/about">회사소개</router-link>
+          <router-link to="null">채용정보</router-link>
+          <router-link to="null">공지사항</router-link>
+          <router-link to="null">입점신청</router-link>
+          <router-link to="null">제휴/광고문의</router-link>
+          <router-link to="null">사업자 구매 회원</router-link>
         </div>
         <div class="right">
           <p>
@@ -61,9 +61,6 @@ footer {
   .tit {
     padding-right: 20px;
     font-size: 40px;
-    font-weight: 400;
-    font-family: "Abril Fatface", serif;
-    text-transform: uppercase;
   }
   .inner {
     padding: 60px 0;

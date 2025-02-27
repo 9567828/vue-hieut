@@ -11,7 +11,7 @@
                 더 이상 예쁜 인테리어만 하지 마세요<br />
                 가치있는 작품으로 공간의 격을 올려보세요
               </p>
-              <button class="about-btn">about us</button>
+              <button @click.prevent="linkToAbout" class="about-btn">about us</button>
             </div>
           </div>
         </SwiperSlide>
@@ -27,7 +27,7 @@
                 <img :src="[slide.img]" :alt="[`img${slide.id}`]" />
               </div>
               <div class="tit_wrap">
-                <h1 class="tit">new project</h1>
+                <h1 class="subject">new project</h1>
                 <div class="txt_wrap">
                   <span>{{ slide.title }}</span>
                   <p>
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import router from "@/router";
 import SlideComponent from "./config/Slide.vue";
 import HomeIntro from "./HomeIntro.vue";
 import { SwiperSlide } from "vue-awesome-swiper";
@@ -121,6 +122,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    linkToAbout() {
+      router.push("/about");
+    },
   },
 };
 </script>
@@ -208,7 +214,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     color: $main-black;
-    .tit {
+    .subject {
       padding-top: 50px;
       font-size: 40px;
       font-weight: 700;
