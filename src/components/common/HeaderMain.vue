@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header ref="head" :class="['header', { scrolling: isScrollDown }]">
     <div class="head-inner">
       <router-link to="/" class="logo">
         <img src="/img/hieut.svg" alt="로고" />
@@ -27,32 +27,56 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 const isMenuOn = ref(false);
+const head = ref(null);
+const scrollY = ref(0);
+const lastScroll = ref(0);
+const headerHeight = ref(0);
+const isScrollDown = ref(false);
 
-const path = location.pathname;
+const updateScroll = () => {
+  scrollY.value = window.scrollY;
+  if (scrollY.value >= headerHeight.value) {
+    if (scrollY.value > lastScroll.value && lastScroll.value > 0) {
+      isScrollDown.value = true;
+    } else {
+      isScrollDown.value = false;
+    }
+  }
+  lastScroll.value = scrollY.value;
+};
 
-console.log(path);
+onMounted(() => {
+  headerHeight.value = head.value.offsetHeight;
+  window.addEventListener("scroll", updateScroll);
+});
 </script>
 
 <style lang="scss" scoped>
-header {
+header.header {
   position: fixed;
   width: 100%;
   height: 100px;
   background-color: #fff;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
-  transition: 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out; /* transform에 transition을 추가 */
   z-index: 20;
-  .head-inner {
-    width: initial;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    margin: 0 240px;
-  }
 }
+
+.head-inner {
+  width: initial;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 240px;
+}
+
+:global(header.header.scrolling) {
+  transform: translateY(-100%);
+}
+
 .logo {
   img {
     width: 123px;
