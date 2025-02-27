@@ -32,30 +32,31 @@ export default {
   data() {
     return {
       swiperOptions: {
-        // loop: true,
+        loop: true,
         effect: "fade",
-        // autoplay: {
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
       },
 
       slides: [
         { id: 1, class: "c1" },
-        // { id: 2, class: "c2" },
-        // { id: 3, class: "c3" },
+        { id: 2, class: "c2" },
+        { id: 3, class: "c3" },
       ],
     };
   },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   width: initial;
+  padding-top: 0;
 }
 
-.swiper {
+::v-deep .swiper {
   height: 100vh;
   .slide {
     background-position: center;
@@ -75,7 +76,7 @@ export default {
 }
 
 .tit-wrap {
-  margin: 450px 240px 0;
+  margin-top: 450px;
   .tit {
     font-size: 70px;
     color: #fff;

@@ -6,7 +6,7 @@
 
 <script>
 import { Swiper } from "vue-awesome-swiper";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
 import "swiper/swiper-bundle.css";
 
 export default {
@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      modules: [Pagination, Navigation, Autoplay],
+      modules: [Pagination, Navigation, Autoplay, EffectFade],
     };
   },
 };

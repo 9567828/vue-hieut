@@ -1,18 +1,16 @@
 <template>
   <header>
     <div class="head-inner">
-      <h1 class="logo">
-        <router-link to="/">
-          <img src="/img/headerlogo.svg" alt="로고" />
-        </router-link>
-      </h1>
+      <router-link to="/" class="logo">
+        <img src="/img/hieut.svg" alt="로고" />
+      </router-link>
       <nav>
         <ul>
           <li>
-            <router-link to="/">home</router-link>
+            <router-link to="/" active-class="active">home</router-link>
           </li>
           <li @mouseenter="isMenuOn = true" @mouseleave="isMenuOn = false">
-            <router-link to="">about us</router-link>
+            <router-link to="/about" active-class="active">about us</router-link>
             <ul v-if="isMenuOn" class="sub_menu">
               <li><router-link to="">회사소개</router-link></li>
               <li><router-link to="">our story</router-link></li>
@@ -20,7 +18,7 @@
             </ul>
           </li>
           <li>
-            <router-link to="">contact</router-link>
+            <router-link to="/contact" active-class="active">contact</router-link>
           </li>
         </ul>
       </nav>
@@ -31,6 +29,10 @@
 <script setup>
 import { ref } from "vue";
 const isMenuOn = ref(false);
+
+const path = location.pathname;
+
+console.log(path);
 </script>
 
 <style lang="scss" scoped>
@@ -51,9 +53,11 @@ header {
     margin: 0 240px;
   }
 }
-h1 img {
-  width: 123px;
-  height: 54px;
+.logo {
+  img {
+    width: 123px;
+    height: 54px;
+  }
 }
 nav {
   ul {
@@ -67,10 +71,6 @@ nav {
       a {
         font-size: 20px;
         text-transform: capitalize;
-      }
-      &:hover a:not(.sub_menu a) {
-        font-weight: 600;
-        color: $main-color;
       }
     }
   }
@@ -96,5 +96,11 @@ nav {
       }
     }
   }
+}
+
+nav li:hover a:not(.sub_menu a),
+a.active {
+  font-weight: 600;
+  color: $main-color;
 }
 </style>

@@ -7,7 +7,7 @@
         <li @click="menuOn('intro')" :class="{ active: isIntroOn }">introduction</li>
       </ul>
       <div class="info_wrap">
-        <div v-if="isAppOn" ref="app" class="content">
+        <div v-show="isAppOn" ref="app" class="content">
           <div class="tit_wrap">
             <h1>가치를 알아보는 당신의 공간의 격을 올리다</h1>
           </div>
@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div v-if="isStroyOn" ref="story" class="content">
+        <div v-show="isStroyOn" ref="story" class="content">
           <div class="tit_wrap">
             <h1>내가 하고싶은 인테리어 <span class="tit">hieut</span> 이 꿈을 이루어 드리겠습니다.</h1>
           </div>
@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div v-if="isIntroOn" ref="intro" class="content">
+        <div v-show="isIntroOn" ref="intro" class="content">
           <div class="tit_wrap">
             <h1>올수리부터 리모델링까지 <span class="tit">hieut</span> 이 함께하겠습니다.</h1>
           </div>
