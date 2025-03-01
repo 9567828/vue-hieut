@@ -168,7 +168,7 @@ const slideOption = {
     height: 100%;
   }
 }
-::v-deep .swiper-pagination-bullet.swiper-pagination-bullet-active {
+:deep(.swiper-pagination-bullet.swiper-pagination-bullet-active) {
   background-color: $main-color;
 }
 

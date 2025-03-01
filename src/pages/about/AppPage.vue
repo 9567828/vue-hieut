@@ -146,8 +146,8 @@ const { moveToPage } = CustomMove();
         <h1 class="tit">hieut</h1>
         <div class="mob_wrap">
           <div class="img_wrap">
-            <a href="#"><img src="/img/apple.png" alt="apple" /></a>
-            <a href="#"><img src="/img/google-play 1.svg" alt="google" /></a>
+            <a @click.prevent="moveToPage('/error')" href="#"><img src="/img/apple.png" alt="apple" /></a>
+            <a @click.prevent="moveToPage('/error')" href="#"><img src="/img/google-play 1.svg" alt="google" /></a>
           </div>
           <p>
             우리집 꾸미고/고치고/ 관리걱정없이 시공할 수 있도록,<br />

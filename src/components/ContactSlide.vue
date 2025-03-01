@@ -21,7 +21,7 @@ const slidesLtr = [
   { id: 16, src: "img/contact/interior/인테리어11.jpeg" },
   { id: 17, src: "img/contact/interior/인테리어12.jpeg" },
   { id: 18, src: "img/contact/interior/인테리어13.jpeg" },
-  { id: 19, src: "img/contact/interior/인테리어14.jpeg" },
+  { id: 19, src: "img/contact/interior/인테리어14.png" },
   { id: 20, src: "img/contact/interior/인테리어15.jpeg" },
 ];
 
@@ -101,7 +101,7 @@ const slideOption = {
   }
 }
 
-::v-deep .swiper-wrapper {
+:deep(.swiper-wrapper) {
   transition-timing-function: linear;
 }
 

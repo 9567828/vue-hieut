@@ -16,7 +16,7 @@
           <p>• 토요일, 공휴일 : 히읕 자체상품, 시공, 제품설치 문의 상담.</p>
           <p>• 일요일 : 휴무</p>
           <a href="https://pf.kakao.com/_YxlxefG" target="_blank" class="btn b1">카톡 상담(평일 09:00~17:00)</a>
-          <router-link to="#" class="btn b2">이메일 문의</router-link>
+          <router-link to="/contact" class="btn b2">문의 하기</router-link>
         </div>
         <div class="middle">
           <router-link to="/about">회사소개</router-link>
