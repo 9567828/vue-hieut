@@ -1,9 +1,7 @@
 <script setup>
-import router from "@/router";
+import CustomMove from "../common/CutomMove.js";
 
-const moveToPage = () => {
-  router.push("/contact");
-};
+const { moveToPage } = CustomMove();
 </script>
 
 <template>
@@ -17,7 +15,7 @@ const moveToPage = () => {
         </div>
         <div class="sub">
           <p>
-            'HIEUT’ 은 우리집 문제에 기초부터 대응하여 보기에만<br />
+            'HIEUT' 은 우리집 문제에 기초부터 대응하여 보기에만<br />
             예쁜 인테리어에서 보다 더 나아가 튼튼하고 합리적이며,<br />
             세련된 리모델링 생태계를 위해 고민하고 연구하였습니다.<br />
             <br />
@@ -26,7 +24,7 @@ const moveToPage = () => {
             위해 히읕이 당신의 믿음직한 파트너가 되어드리겠습니다.
           </p>
         </div>
-        <button class="primary" @click.prevent="moveToPage">contact us</button>
+        <button class="primary" @click.prevent="moveToPage('/error')">contact us</button>
       </div>
     </section>
     <section class="dep2">

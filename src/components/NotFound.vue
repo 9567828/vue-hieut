@@ -1,10 +1,7 @@
 <script setup>
-import router from "@/router";
-import { onMounted } from "vue";
+import CustomMove from "../common/CutomMove";
 
-const moveToHome = () => {
-  router.push("/");
-};
+const { moveToPage } = CustomMove();
 </script>
 
 <template>
@@ -20,7 +17,7 @@ const moveToHome = () => {
       </div>
       <div class="line"></div>
     </div>
-    <button class="primary" @click.prevent="moveToHome">홈으로 이동</button>
+    <button class="primary" @click.prevent="moveToPage('/')">홈으로 이동</button>
   </div>
 </template>
 

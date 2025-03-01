@@ -1,6 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
-import { nextTick } from "vue";
-import Home from "@/components/Home.vue";
+import HomePage from "@/components/HomePage.vue";
 import AboutPage from "@/components/AboutPage.vue";
 import ContactPage from "@/components/ContactPage.vue";
 import NotFound from "@/components/NotFound.vue";
@@ -8,18 +7,16 @@ import StoryPage from "@/components/about/StoryPage.vue";
 import AppPage from "@/components/about/AppPage.vue";
 
 const routes = [
-  { path: "/", component: Home },
+  { path: "/", component: HomePage },
   {
     path: "/about",
-    // component: AboutPage, 컴포넌트를 설정하지 않으면 중첩없이 사용할 수 있음
+    // 컴포넌트를 설정하지 않으면 중첩없이 사용할 수 있음
     children: [
       { path: "", component: AboutPage },
       { path: "story", component: StoryPage },
       { path: "app", component: AppPage },
     ],
   },
-  // { path: "/about/story", component: StoryPage },
-  // { path: "/about/app", component: AppPage },
   { path: "/contact", component: ContactPage },
   { path: "/:pathMatch(.*)*", component: NotFound },
   { path: "/error", component: NotFound },

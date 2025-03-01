@@ -1,3 +1,32 @@
+<script setup>
+import CustomMove from "../common/CutomMove";
+import { ref } from "vue";
+
+const { moveToPage } = CustomMove();
+
+const isAppOn = ref(true);
+const isStroyOn = ref(false);
+const isIntroOn = ref(false);
+
+const menuOn = (menu) => {
+  // 초기화
+  isAppOn.value = false;
+  isStroyOn.value = false;
+  isIntroOn.value = false;
+
+  console.log(menu);
+
+  // 클릭된 메뉴 활성화
+  if (menu === "app") {
+    isAppOn.value = true;
+  } else if (menu === "story") {
+    isStroyOn.value = true;
+  } else if (menu === "intro") {
+    isIntroOn.value = true;
+  }
+};
+</script>
+
 <template>
   <section class="inner">
     <div class="about_menu">
@@ -27,8 +56,8 @@
                 구매/시공/설치까지 쉽고 간편하게 이용해보세요
               </p>
               <div class="img_box">
-                <a href="#" @click.prevent="moveTopage"><img src="img/google-play.svg" alt="google" /></a>
-                <a href="#" @click.prevent="moveTopage"><img src="img/app-store-icon.svg" alt="apple" /></a>
+                <a href="#" @click.prevent="moveToPage('/error')"><img src="img/google-play.svg" alt="google" /></a>
+                <a href="#" @click.prevent="moveToPage('/error')"><img src="img/app-store-icon.svg" alt="apple" /></a>
               </div>
             </div>
           </div>
@@ -85,37 +114,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import router from "@/router";
-import { ref } from "vue";
-
-const isAppOn = ref(true);
-const isStroyOn = ref(false);
-const isIntroOn = ref(false);
-
-const menuOn = (menu) => {
-  // 초기화
-  isAppOn.value = false;
-  isStroyOn.value = false;
-  isIntroOn.value = false;
-
-  console.log(menu);
-
-  // 클릭된 메뉴 활성화
-  if (menu === "app") {
-    isAppOn.value = true;
-  } else if (menu === "story") {
-    isStroyOn.value = true;
-  } else if (menu === "intro") {
-    isIntroOn.value = true;
-  }
-};
-
-const moveTopage = () => {
-  router.push("/error");
-};
-</script>
 
 <style lang="scss" scoped>
 .inner {
