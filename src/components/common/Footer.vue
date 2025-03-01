@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  margin-top: 200px;
+  margin-top: 150px;
   background-color: #000;
   color: #fff;
   font-size: 18px;
@@ -65,21 +65,17 @@ footer {
   .inner {
     padding: 60px 0;
     .top {
-      display: flex;
-      align-items: center;
+      @include flex-style(null, null, center, null);
       p {
-        font-size: 28px;
-        font-weight: 700;
+        @include font-style(28px, 700);
       }
     }
     .center {
-      display: flex;
-      justify-content: space-between;
+      @include flex-style(null, space-between, null, null);
       padding-top: 20px;
       .left {
         .tel {
-          display: flex;
-          align-items: center;
+          @include flex-style(null, null, center, null);
           font-size: 28px;
           p:first-child {
             font-weight: 700;
@@ -94,8 +90,7 @@ footer {
           display: block;
           border-radius: 5px;
           border: 1px solid #edeaea;
-          font-size: 20px;
-          font-weight: 600;
+          @include font-style(20px, 600);
           line-height: 50px;
           color: #fff;
           text-align: center;
@@ -142,10 +137,7 @@ footer {
         }
       }
       .right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-style(column, space-between, center, null);
         p {
           font-weight: 600;
           line-height: 150%;
@@ -154,8 +146,7 @@ footer {
           }
         }
         h1 {
-          font-size: 30px;
-          font-weight: 600;
+          @include font-style(30px, 600);
           text-transform: capitalize;
           text-align: center;
         }

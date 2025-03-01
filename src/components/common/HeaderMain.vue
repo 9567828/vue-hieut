@@ -66,9 +66,7 @@ header.header {
 
 .head-inner {
   width: initial;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-style(null, space-between, center, null);
   height: 100%;
   margin: 0 240px;
 }
@@ -85,10 +83,7 @@ header.header {
 }
 nav {
   ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 55px;
+    @include flex-style(null, space-between, center, 55px);
     li {
       position: relative;
       padding: 40px 0;

@@ -15,15 +15,9 @@ module.exports = defineConfig({
       scss: {
         additionalData: `
           @use "@/assets/scss/_variables.scss" as *;
+          @use "@/assets/scss/abstracts/mixin.scss" as *;
         `,
       },
-      // CSS Modules을 사용할 수 있도록 설정
-      // css: {
-      //   modules: {
-      //     localIdentName: "[name]_[local]_[hash:base64:5]",
-      //     exportLocalsConvention: "camelCaseOnly",
-      //   },
-      // },
     },
   },
 });

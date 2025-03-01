@@ -1,5 +1,4 @@
-@import url("../scss/_reset.scss");
-@import url("../scss/font.scss");
+@use "abstracts/index" as *;
 
 .container {
   width: 1440px;
@@ -14,7 +13,7 @@
   margin: 0 auto;
 }
 
-.primary {
+.primary-btn {
   padding: 10px 40px;
   border-radius: 10px;
   background-color: #E4251F;
@@ -27,4 +26,13 @@
   font-weight: 400;
   font-family: "Abril Fatface", serif;
   text-transform: uppercase;
+}
+
+.pink-btn {
+  padding: 10px;
+  border: 1px solid #e13681;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #e13681;
+  font-size: 14px;
 }

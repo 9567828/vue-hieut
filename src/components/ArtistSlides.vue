@@ -1,5 +1,5 @@
 <script setup>
-import SlideComponent from "../config/Slide.vue";
+import SlideComponent from "./config/Slide.vue";
 import { SwiperSlide } from "vue-awesome-swiper";
 
 const slides = [
@@ -183,8 +183,7 @@ const slideOption = {
     }
     h3,
     h4 {
-      font-size: 22px;
-      font-weight: 600;
+      @include font-style(22px, 600);
       padding-bottom: 30px;
     }
     .career-wrap {

@@ -14,8 +14,6 @@ const menuOn = (menu) => {
   isStroyOn.value = false;
   isIntroOn.value = false;
 
-  console.log(menu);
-
   // 클릭된 메뉴 활성화
   if (menu === "app") {
     isAppOn.value = true;
@@ -149,8 +147,7 @@ const menuOn = (menu) => {
   margin-bottom: 154px;
   h1 {
     color: $main-black;
-    font-size: 36px;
-    font-weight: 700;
+    @include font-style(36px, 700);
     span {
       color: #f24822;
       line-height: 3rem;
@@ -178,12 +175,9 @@ const menuOn = (menu) => {
 }
 
 .txt_wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flex-style(column, space-between, null, null);
   h1 {
-    font-size: 26px;
-    font-weight: 600;
+    @include font-style(26px, 600);
     text-transform: uppercase;
     line-height: 130%;
     color: #414141;
@@ -194,8 +188,7 @@ const menuOn = (menu) => {
   }
   .btn {
     padding-left: 20px;
-    font-size: 20px;
-    font-weight: 700;
+    @include font-style(20px, 700);
     text-transform: capitalize;
     color: #656565;
     background-color: #fff;
@@ -203,9 +196,7 @@ const menuOn = (menu) => {
 }
 
 .img_box {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  @include flex-style(null, space-evenly, center, null);
   a {
     width: 170px;
     height: 60px;

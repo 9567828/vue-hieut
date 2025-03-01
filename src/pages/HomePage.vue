@@ -1,6 +1,6 @@
 <script setup>
-import SlideComponent from "./config/Slide.vue";
-import HomeIntro from "./HomeIntro.vue";
+import SlideComponent from "../components/config/Slide.vue";
+import HomeIntro from "../components/HomeIntro.vue";
 import { SwiperSlide } from "vue-awesome-swiper";
 import CustomMove from "../common/CutomMove";
 
@@ -151,16 +151,12 @@ const projectSlides = [
     font-size: 70px;
     color: #fff;
     margin-bottom: 40px;
-    font-weight: 400;
-    font-family: "Abril Fatface", serif;
-    text-transform: uppercase;
   }
   .sub-tit {
     color: #fff;
     letter-spacing: -0.264px;
     line-height: 150%;
-    font-size: 26px;
-    font-weight: 400;
+    @include font-style(26px, 400);
   }
   .about-btn {
     width: 150px;
@@ -169,8 +165,7 @@ const projectSlides = [
     background-color: #000;
     color: #fff;
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 700;
+    @include font-style(20px, 700);
     margin-top: 50px;
   }
 }
@@ -184,9 +179,7 @@ const projectSlides = [
   padding: 58px 0;
   background-color: #ededed;
   .slide-wrap {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
+    @include flex-style(null, center, stretch, 28px);
   }
   .img_wrap {
     width: 823px;
@@ -198,15 +191,11 @@ const projectSlides = [
   }
   .tit_wrap {
     width: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-style(column, space-between, center, null);
     color: $main-black;
     .subject {
       padding-top: 50px;
-      font-size: 40px;
-      font-weight: 700;
+      @include font-style(40px, 700);
       text-transform: uppercase;
     }
     .txt_wrap {

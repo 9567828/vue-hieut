@@ -24,7 +24,7 @@ const { moveToPage } = CustomMove();
             위해 히읕이 당신의 믿음직한 파트너가 되어드리겠습니다.
           </p>
         </div>
-        <button class="primary" @click.prevent="moveToPage('/error')">contact us</button>
+        <button class="primary-btn" @click.prevent="moveToPage('/contact')">contact us</button>
       </div>
     </section>
     <section class="dep2">
@@ -74,41 +74,35 @@ const { moveToPage } = CustomMove();
 
 <style lang="scss" scoped>
 .dep1 {
-  display: flex;
-  justify-content: space-evenly;
+  @include flex-style(null, space-evenly, null, null);
   img {
     width: 718px;
     height: 467px;
   }
   .txt_wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    @include flex-style(column, space-around, center, null);
     .title {
       text-align: center;
       p {
-        font-size: 22px;
-        font-weight: 700;
+        @include font-style(22px, 700);
         color: $main-black;
       }
       h1 {
-        font-size: 60px;
+        @include font-style(60px, null);
         color: #e93e43;
       }
     }
     .sub {
       p {
         padding-top: 50px;
-        font-size: 18px;
+        @include font-style(18px, null);
         line-height: 150%;
         color: #414141;
         text-transform: uppercase;
       }
     }
-    .primary {
+    .primary-btn {
       font-weight: 500;
-      border-radius: 10px;
       text-transform: capitalize;
       align-self: flex-end;
     }
@@ -116,26 +110,22 @@ const { moveToPage } = CustomMove();
 }
 
 .dep2 {
+  text-transform: uppercase;
   margin-top: 200px;
   .inner {
     color: #414141;
   }
   .tit_wrap {
-    font-size: 50px;
-    font-weight: 700;
+    @include font-style(50px, 700);
     padding-bottom: 102px;
-    h1 {
-      text-transform: uppercase;
-    }
     .tit {
       color: $main-color;
     }
   }
   .sub_tit p,
   .bottom p {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 150%;
+    @include font-style(30px, 700);
+    line-height: 1.5;
     text-align: center;
   }
   .bottom p {
@@ -148,10 +138,7 @@ const { moveToPage } = CustomMove();
     }
     .top,
     .middle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
+      @include flex-style(null, center, center, 50px);
     }
     .top img:first-child,
     .middle img:first-child {
@@ -159,8 +146,7 @@ const { moveToPage } = CustomMove();
     }
     .top p,
     .middle p {
-      font-size: 20px;
-      font-weight: 600;
+      @include font-style(20px, 600);
     }
   }
 }

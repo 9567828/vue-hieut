@@ -17,17 +17,16 @@ const { moveToPage } = CustomMove();
       </div>
       <div class="line"></div>
     </div>
-    <button class="primary" @click.prevent="moveToPage('/')">홈으로 이동</button>
+    <button class="primary-btn" @click.prevent="moveToPage('/')">홈으로 이동</button>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.container {
+  padding-top: 100px;
+}
 .layout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 70px;
+  @include flex-style(column, center, center, 70px);
   img {
     width: 280px;
     height: 280px;
@@ -38,8 +37,7 @@ const { moveToPage } = CustomMove();
     text-align: center;
     line-height: 1.5;
     h1 {
-      font-size: 50px;
-      font-weight: 800;
+      @include font-style(50px, 800);
       span {
         color: $main-color;
       }
@@ -56,7 +54,7 @@ const { moveToPage } = CustomMove();
     background-color: #b0b0b0;
   }
 }
-.primary {
+.primary-btn {
   font-size: 18px;
 }
 </style>

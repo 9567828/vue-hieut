@@ -1,5 +1,5 @@
 <script setup>
-import ArtistSlides from "./ArtistSlides.vue";
+import ArtistSlides from "../../components/ArtistSlides.vue";
 </script>
 
 <template>
@@ -41,8 +41,7 @@ import ArtistSlides from "./ArtistSlides.vue";
   text-transform: uppercase;
 }
 h1 {
-  font-size: 56px;
-  font-weight: 700;
+  @include font-style(56px, 700);
   text-align: center;
 }
 .intro {
@@ -53,14 +52,10 @@ h1 {
     }
   }
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 250px;
+    @include flex-style(null, center, center, 250px);
     .text-wrap {
       h1 {
-        font-size: 30px;
-        font-weight: 700;
+        @include font-style(30px, 700);
         text-align: center;
         padding-bottom: 76px;
       }
@@ -78,10 +73,8 @@ h1 {
     padding-bottom: 195px;
   }
   .art-wrap {
-    display: flex;
+    @include flex-style(null, center, null, 80px 90px);
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 80px 90px;
   }
 }
 </style>
