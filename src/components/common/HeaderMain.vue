@@ -1,3 +1,30 @@
+<script setup>
+import { onMounted, ref } from "vue";
+const isMenuOn = ref(false);
+const head = ref(null);
+const scrollY = ref(0);
+const lastScroll = ref(0);
+const headerHeight = ref(0);
+const isScrollDown = ref(false);
+
+const updateScroll = () => {
+  scrollY.value = window.scrollY;
+  if (scrollY.value >= headerHeight.value) {
+    if (scrollY.value > lastScroll.value && lastScroll.value > 0) {
+      isScrollDown.value = true;
+    } else {
+      isScrollDown.value = false;
+    }
+  }
+  lastScroll.value = scrollY.value;
+};
+
+onMounted(() => {
+  headerHeight.value = head.value.offsetHeight;
+  window.addEventListener("scroll", updateScroll);
+});
+</script>
+
 <template>
   <header ref="head" :class="['header', { scrolling: isScrollDown }]">
     <div class="head-inner">
@@ -25,33 +52,6 @@
     </div>
   </header>
 </template>
-
-<script setup>
-import { onMounted, ref } from "vue";
-const isMenuOn = ref(false);
-const head = ref(null);
-const scrollY = ref(0);
-const lastScroll = ref(0);
-const headerHeight = ref(0);
-const isScrollDown = ref(false);
-
-const updateScroll = () => {
-  scrollY.value = window.scrollY;
-  if (scrollY.value >= headerHeight.value) {
-    if (scrollY.value > lastScroll.value && lastScroll.value > 0) {
-      isScrollDown.value = true;
-    } else {
-      isScrollDown.value = false;
-    }
-  }
-  lastScroll.value = scrollY.value;
-};
-
-onMounted(() => {
-  headerHeight.value = head.value.offsetHeight;
-  window.addEventListener("scroll", updateScroll);
-});
-</script>
 
 <style lang="scss" scoped>
 header.header {
