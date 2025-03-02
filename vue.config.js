@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: "/vue-hieut/",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-hieut/" : "/",
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
