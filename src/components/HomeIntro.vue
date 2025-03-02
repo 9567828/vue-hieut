@@ -81,7 +81,7 @@ const menuOn = (menu) => {
                 시공으로 인테리어 시공시 문제발생에<br />
                 저희 시공팀은 빠른대처와 a/s가 가능합니다.
               </p>
-              <router-link to="" class="btn">view more</router-link>
+              <router-link to="/about" class="btn">view more</router-link>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ const menuOn = (menu) => {
                 좀 더 합리적비용과 함께 a/s 보장되는<br />
                 인테리어 생태계를 히읕이 앞장서겠습니다.
               </p>
-              <router-link to="" class="btn">contact us</router-link>
+              <router-link to="/contact" class="btn">contact us</router-link>
             </div>
           </div>
         </div>
