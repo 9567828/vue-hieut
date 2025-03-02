@@ -1,24 +1,12 @@
 # vue-hieut
+---
+### 기획 의도
+학원에서 만난 분께서 스타트업을 시작하게 되어 회사소개 사이트가 필요하다고 제작 의뢰를 하여 사이트를 제작하게 되었습니다. <br>
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 사용한 기술<br>
+* 프론트엔드: vue.js
+* Vue Router: 페이지 간 라우팅
+  * 컴포넌트를 이용하여 반복된 코드를 방지하고 재사용성 및 유지보수 용이성 증가 <br>
+  * vue Router를 사용하여 여러 페이지(홈, 소개, 프로젝트 등) 간의 전환을 구현 <br>
+* css: scss <br>
+  * 반복적인 style 코드를 mixin으로 재사용성 및 유지보수 용이성 증가
