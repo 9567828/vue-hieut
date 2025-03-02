@@ -3,6 +3,7 @@ const webpack = require("webpack");
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  publicPath: "/vue-hieut/",
   configureWebpack: {
     plugins: [
       new webpack.DefinePlugin({
