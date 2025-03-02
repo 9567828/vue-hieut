@@ -20,8 +20,8 @@ const { moveToPage } = CustomMove();
                 공간스타일링 히읕과 함께 하세요
               </p>
               <div class="appdownicon">
-                <a href="" @click.prevent="moveToPage('/error')"><img src="/img/google-play 1.svg" alt="google" /></a>
-                <a href="" @click.prevent="moveToPage('/error')"><img src="/img/apple.png" alt="apple" /></a>
+                <a href="" @click.prevent="moveToPage('/error')"><img src="/img/google.svg" alt="google" /></a>
+                <a href="" @click.prevent="moveToPage('/error')"><img src="/img/apple.svg" alt="apple" /></a>
               </div>
             </div>
           </div>
@@ -146,8 +146,8 @@ const { moveToPage } = CustomMove();
         <h1 class="tit">hieut</h1>
         <div class="mob_wrap">
           <div class="img_wrap">
-            <a @click.prevent="moveToPage('/error')" href="#"><img src="/img/apple.png" alt="apple" /></a>
-            <a @click.prevent="moveToPage('/error')" href="#"><img src="/img/google-play 1.svg" alt="google" /></a>
+            <a @click.prevent="moveToPage('/error')" href="#"><img src="/img/apple.svg" alt="apple" /></a>
+            <a @click.prevent="moveToPage('/error')" href="#"><img src="/img/google.svg" alt="google" /></a>
           </div>
           <p>
             우리집 꾸미고/고치고/ 관리걱정없이 시공할 수 있도록,<br />

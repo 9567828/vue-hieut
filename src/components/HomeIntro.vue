@@ -54,8 +54,8 @@ const menuOn = (menu) => {
                 구매/시공/설치까지 쉽고 간편하게 이용해보세요
               </p>
               <div class="img_box">
-                <a href="#" @click.prevent="moveToPage('/error')"><img src="img/google-play.svg" alt="google" /></a>
-                <a href="#" @click.prevent="moveToPage('/error')"><img src="img/app-store-icon.svg" alt="apple" /></a>
+                <a href="#" @click.prevent="moveToPage('/error')"><img src="img/google.svg" alt="google" /></a>
+                <a href="#" @click.prevent="moveToPage('/error')"><img src="img/apple.svg" alt="apple" /></a>
               </div>
             </div>
           </div>
@@ -200,6 +200,10 @@ const menuOn = (menu) => {
   a {
     width: 170px;
     height: 60px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>
